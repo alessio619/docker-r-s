@@ -1,8 +1,8 @@
 # Dockerfile to run R script
 
-FROM vladdsm/docker-r-h2o
+FROM vladdsm/docker-r-r
 
-MAINTAINER 'Vladimir Zhbanko' <vladimir.zhbanko@gmail.com>
+MAINTAINER 'alessio619' <aleabraham6@gmail.com>
 
 ## create directories
 RUN mkdir -p /01_data
@@ -23,4 +23,4 @@ COPY /02_code/check_if_optimize.R /02_code/check_if_optimize.R
 CMD Rscript /02_code/script2run.R
 
 ## command to run this container
-#docker run -it --rm -v /Users/vladdsm/Shared:/03_output vladdsm/docker-r-s
+#docker run -it --rm -v /A:/rstudio_shared:/home/myself/r-studio/03_output alessio619/docker-r-s
